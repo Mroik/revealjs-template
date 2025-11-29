@@ -16,8 +16,7 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-external-replace="./slides/01-intro.html"></section>
 			</div>
 		</div>
 
@@ -31,9 +30,20 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				controls: false,
+				navigationMode: 'linear',
+				transition: 'none',
+				progress: false,
+				overview: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				dependencies: [{
+					src: './plugin/external/external.js',
+					condition: function() {
+						return !!document.querySelector( '[data-external],[data-external-replace]' );
+					}
+				}]
 			});
 		</script>
 	</body>
