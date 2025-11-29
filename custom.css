@@ -1,0 +1,17 @@
+.reveal x-section-title {
+  position: fixed;
+  top: 0px;
+  right: 20px;
+  color: #ffc600;
+  font-weight: bold;
+  text-align: right;
+}
+
+b {
+	color: #ffc600;
+}
+
+:root {
+	--r-heading-color: #ffc600;
+	/* --r-main-font-size: 56px; */
+}
